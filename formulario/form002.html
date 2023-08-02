@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="" method="get" autocomplete="on">
+        <p>
+        <label for="inome">Nome</label>
+        <input type="text" name="Nome" id="inome" autocomplete="name" placeholder="Nome Completo" required maxlength="30">
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" step="0.5" value="5.5">
+        </p>
+        <fieldset>
+            <legend>Campo de Data</legend>
+            <p>
+                <label for="imes">Período Letivo</label>
+                <input type="month" name="Mês" id="imes">
+            </p>
+            <p>
+                <label for="ihora">Horário</label>
+                <input type="time" name="Horário" id="ihora">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Outros inputs</legend>
+            <p>
+                <label for="icor">Cor</label>
+                <input type="color" name="Cor" id="icor" value="#00ff00">
+            </p>
+            <p>
+                <label for="inivel">Nivel</label>
+                <input type="range" name="nivel" id="inivel" min="0" max="10" value="5">
+            </p>
+
+        </fieldset>
+        <fieldset>
+            <legend>Alguns Elementos sem ser Input</legend>
+            <p>
+                <label for="iest">Estado</label>
+                <select name="estado" id="iest">
+                    <optgroup label="Região Sudeste">
+                        <option value="RJ">Rio de Janeio</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="SP" selected>São Paulo</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="ipfro">Profissão</label>
+                <input type="text" name="Profissão" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option value="ADM">Administrador</option>
+                    <option value="CONT">Contabilista</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imsg">Mensagem</label>
+                <textarea name="Mensagem" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
